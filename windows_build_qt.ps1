@@ -12,7 +12,7 @@ if(!($bits -match "^(32|64)$")){
   throw "'bits' variable incorrectly set to [$bits]. Hint: '32' or '64' value is expected."
 }
 
-$qtBuildScriptVersion = '789d35d6bc3dd2bd150594f27bf401ae2925ebe2'
+$qtBuildScriptVersion = 'c28a7a132f9fd1059fd1ff441dc5321f92a1f637'
 
 if (![System.IO.Directory]::Exists($destDir)) {[System.IO.Directory]::CreateDirectory($destDir)}
 
@@ -59,7 +59,7 @@ If (Test-Path $qtBuildScriptFile)
   {
   Remove-Item $qtBuildScriptFile
   }
-$url = ('https://raw2.github.com/jcfr/qt-easy-build/' + $qtBuildScriptVersion + '/cmake/' + $qtBuildScriptName)
+$url = ('https://raw2.github.com/finetjul/qt-easy-build/' + $qtBuildScriptVersion + '/cmake/' + $qtBuildScriptName)
 Write-Host "Download $url"
 Download-File $url $qtBuildScriptFile
 
